@@ -34,21 +34,24 @@ Guide: https://documentation.ubuntu.com/lxd/stable-5.21/tutorial/first_steps/
 2. `sudo apt install snapd`
 3. `sudo snap install lxd`
 4. `getent group lxd | grep "$USER"`
-5. `lxd init --minimal
+5. `lxd init --minimal`
 6. `lxc info | grep -FA2 'instance_types'`
-7. `lxc image list ubuntu:`
-8. `lxc launch ubuntu:24.04 first`
-9. `lxc copy first third`
-10. `lxc list`
-11. `lxc start third`
-12. `lxc launch ubuntu:24.04 ubuntu-vm --vm`
-13. `lxc info first`
-14. `lxc snapshot first clean`
-15. `lxc list first`
-16. `lxc info first`
-17. `lxc restore first clean`
-18. `lxc delete first/clean`
-19. `lxc config set first snapshots.schedule @daily`
+
+##### Example on using a container   
+8. `lxc image list ubuntu:`
+9. `lxc launch ubuntu:24.04 first`
+10. `lxc shell first`
+11. `lxc copy first third`
+12. `lxc list`
+13. `lxc start third`
+14. `lxc launch ubuntu:24.04 ubuntu-vm --vm`
+15. `lxc info first`
+16. `lxc snapshot first clean`
+17. `lxc list first`
+18. `lxc info first`
+19. `lxc restore first clean`
+20. `lxc delete first/clean`
+21. `lxc config set first snapshots.schedule @daily`
 
 ### Letting containers run Docker
 Used official guide here: https://ubuntu.com/tutorials/how-to-run-docker-inside-lxd-containers#2-create-lxd-container

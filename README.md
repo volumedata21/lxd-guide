@@ -102,7 +102,9 @@ If it works run
 ```netplan apply```
 
 After successfully creating a new network bridge you can attach a container by running the following command:
-```lxc config device add CONTAINER-NAME eth1 nic name=eth1 nictype=bridged parent=lxdbr0```
+```
+lxc config device add CONTAINER-NAME eth1 nic name=eth1 nictype=bridged parent=lxdbr0
+```
 This was found on this thread: https://discuss.linuxcontainers.org/t/how-to-add-a-network-interface-in-lxc/437
 
 ### Running Home Assistant as a VM

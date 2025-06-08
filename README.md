@@ -95,3 +95,6 @@ network:
       interfaces:
         - enp3s0
 ```
+
+### Running Home Assistant as a VM
+Guide for running Home Assistant as a VM using LXD: https://seanblanchfield.com/2023/05/home-assistant-os-in-lxd
